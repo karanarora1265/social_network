@@ -1,0 +1,7 @@
+<div><%= comment.content %> </div>
+<%= form_tag('/likes') do %>
+	<%= hidden_field_tag 'comment_id', comment.id %>
+	<div><%= submit_tag 'Liked it?' %></div>
+<% end %>
+<div><%= comment.likes.count %> Likes</div>
+<hr>

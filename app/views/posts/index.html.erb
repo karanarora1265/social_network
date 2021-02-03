@@ -1,0 +1,9 @@
+<%= render 'new' %>
+<div class="posts">
+	<% @posts.each do |_post| %>
+		<div><%= _post.content %></div>
+		<%= link_to 'Show', post_path(_post) %>
+		<div>------------------------------------------------</div>
+		<br/>
+	<% end %>
+</div>

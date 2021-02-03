@@ -1,0 +1,9 @@
+<div><%= @post.content %></div>
+<%= form_tag('/likes') do %>
+	<%= hidden_field_tag 'post_id', @post.id %>
+	<div><%= submit_tag 'Liked it?' %></div>
+<% end %>
+<div><%= @post.likes.count %> Likes</div>
+<div>Comments</div>
+<div><%= render partial: 'new_comment' %></div>
+<div><%= render partial: 'comment', collection: @post.comments %></div>
